@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: gateway
+server:
+  port: 8083
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+zuul:
+  routes:
+    provider1:  /provider1/**
+    provider2:  /provider2/**
